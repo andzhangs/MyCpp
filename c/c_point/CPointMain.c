@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 //
 // Created by 张帅 on 2020/11/9.
 //
@@ -21,13 +20,13 @@ void CPointMain(void) {
     if (ptr) {
         printf("不为空指针");
     } else {
-        printf("为空指针");
+        printf("为空指针\n");
     }
 
     Sample();
 }
 
-void Sample() {
+void Sample(void) {
     int var[] = {10, 100, 200};
     int i, *ptr;
 
@@ -36,8 +35,7 @@ void Sample() {
     i = 0;
     while (ptr <= &var[MAX - 1]) {
 
-        printf("存储地址：var[%d] = %p\n", i, ptr);
-        printf("存储值：var[%d] = %d\n", i, *ptr);
+        printf("\t存储地址：var[%d] = %p, 存储值：%d\n", i, ptr, *ptr);
 
         /* 指向上一个位置 */
         ptr++;

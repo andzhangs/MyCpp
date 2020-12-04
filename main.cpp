@@ -5,6 +5,7 @@
 #include "c/array/ArrayMain.c"
 #include "c/enum/EnumMain.c"
 #include "c/c_point/CPointMain.c"
+#include "c/c_point/MethodPoint.c"
 
 
 using namespace std;
@@ -63,7 +64,7 @@ int main(int argc, char *argv[]) {
 //    cout << userAge << endl;
 //
 //    mColor = yellow;
-//    cout << mColor << endl;
+//    cout << mColoQr << endl;
 //    //函数调用
 //    func(20);
 //
@@ -80,6 +81,12 @@ int main(int argc, char *argv[]) {
 //    EnumMain();
 
     //指针
-    CPointMain();
+//    CPointMain();
+
+    //函数指针
+//    MethodPointMain();
+
+    //回调函数
+    CallMethodMain();
     return 0;
 }

@@ -6,7 +6,10 @@
 #include "c/enum/EnumMain.c"
 #include "c/c_point/CPointMain.c"
 #include "c/c_point/MethodPoint.c"
-
+#include "c/strings/CStringMain.c"
+#include "c/struct/CStructMain.c"
+#include "c/union/CUnionMain.c"
+#include "c/typedef/CTypeDefMain.c"
 
 using namespace std;
 
@@ -87,6 +90,19 @@ int main(int argc, char *argv[]) {
 //    MethodPointMain();
 
     //回调函数
-    CallMethodMain();
+//    CallMethodMain();
+
+    //字符串
+//    CStringMain();
+
+    //结构体、位域
+//    CStructMain();
+
+    //共用体
+//    CUnionMain();
+
+    //typedef
+    CTypeDefMain();
+
     return 0;
 }

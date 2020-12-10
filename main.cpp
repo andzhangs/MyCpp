@@ -10,6 +10,14 @@
 #include "c/struct/CStructMain.c"
 #include "c/union/CUnionMain.c"
 #include "c/typedef/CTypeDefMain.c"
+#include "c/io/CioMain.c"
+#include "c/filereadwrite/FileReadWrite.c"
+#include "c/predefinedProcessor/CProcessorMain.c"
+#include "c/header/Header.h"
+#include "c/errorDealwith/ErrorDealWith.c"
+#include "c/recursion/RecursionMain.c"
+#include "c/variableParameters/VariableParametersMain.c"
+#include "c/cache/CacheManagerMain.c"
 
 using namespace std;
 
@@ -59,8 +67,9 @@ const int Heights = 5;
  * 修饰符 signed 和 unsigned 也可以作为 long 或 short 修饰符的前缀。
  * 例如：unsigned long int
  */
-int main(int argc, char *argv[]) {
 
+
+int main(int argc, char *argv[]) {
 //    cout << "Hello, World!" << endl;
 //
 //    UserAge userAge = 1;
@@ -102,7 +111,29 @@ int main(int argc, char *argv[]) {
 //    CUnionMain();
 
     //typedef
-    CTypeDefMain();
+//    CTypeDefMain();
+
+    //输入输出
+//    CIoMain();
+
+    //文件读取
+//    FileReadWriteMain();
+
+    //预定义处理器
+//    ProcessorMain();
+
+    //C的错误处理
+//    ErrorDealWith();
+
+    //递归
+//    RecursionMain();
+
+    //可变参数
+//    VariableParametersMain();
+
+    //C内存管理
+    CacheManagerMain();
+
 
     return 0;
 }

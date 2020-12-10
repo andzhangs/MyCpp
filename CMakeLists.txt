@@ -10,4 +10,15 @@ add_executable(MyCpp main.cpp
         c/operator/OperatorMain.c
         c/operator/OperatorH.h
         c/storage/SupportH.h
-        c/array/ArrayMain.c c/enum/EnumMain.c c/c_point/CPointMain.c c/c_point/MethodPoint.c c/strings/CStringMain.c c/struct/CStructMain.c c/union/CUnionMain.c c/typedef/CTypeDefMain.c)
+        c/array/ArrayMain.c
+        c/enum/EnumMain.c
+        c/c_point/CPointMain.c
+        c/c_point/MethodPoint.c
+        c/strings/CStringMain.c
+        c/struct/CStructMain.c
+        c/union/CUnionMain.c
+        c/typedef/CTypeDefMain.c
+        c/io/CioMain.c
+        c/filereadwrite/FileReadWrite.c
+        c/predefinedProcessor/CProcessorMain.c
+        c/header/Header.h c/errorDealwith/ErrorDealWith.c c/recursion/RecursionMain.c c/variableParameters/VariableParametersMain.c c/cache/CacheManagerMain.c c/commentLineParam/CCommentLineParamMain.c)

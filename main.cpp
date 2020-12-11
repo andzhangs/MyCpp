@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <iostream>
 #include "c/storage/StorageMain.c"
 #include "c/storage/Support.c"
@@ -18,6 +19,8 @@
 #include "c/recursion/RecursionMain.c"
 #include "c/variableParameters/VariableParametersMain.c"
 #include "c/cache/CacheManagerMain.c"
+#include "c/commentLineParam/CCommentLineParamMain.c"
+#include "c/sortingAlgorithm/CSortingAlgorithmMain.c"
 
 using namespace std;
 
@@ -132,8 +135,16 @@ int main(int argc, char *argv[]) {
 //    VariableParametersMain();
 
     //C内存管理
-    CacheManagerMain();
+//    CacheManagerMain();
 
+    //C命令行参数
+//    const char *args[255]={"testing1","testing2"};
+//    CCommentLineParamMain(3, const_cast<char **>(args));
+//    CCommentLineParamMain(2, const_cast<char **>(args));
+//    CCommentLineParamMain(1, const_cast<char **>(args));
+
+    //冒泡排序
+    CSortingAlgorithmMain();
 
     return 0;
 }

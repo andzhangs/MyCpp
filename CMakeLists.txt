@@ -21,4 +21,4 @@ add_executable(MyCpp main.cpp
         c/io/CioMain.c
         c/filereadwrite/FileReadWrite.c
         c/predefinedProcessor/CProcessorMain.c
-        c/header/Header.h c/errorDealwith/ErrorDealWith.c c/recursion/RecursionMain.c c/variableParameters/VariableParametersMain.c c/cache/CacheManagerMain.c c/commentLineParam/CCommentLineParamMain.c)
+        c/header/Header.h c/errorDealwith/ErrorDealWith.c c/recursion/RecursionMain.c c/variableParameters/VariableParametersMain.c c/cache/CacheManagerMain.c c/commentLineParam/CCommentLineParamMain.c c/sortingAlgorithm/CSortingAlgorithmMain.c)

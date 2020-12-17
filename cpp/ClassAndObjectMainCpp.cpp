@@ -45,7 +45,7 @@ class Line2 {
 
 void printRes(Line line) {
     /* 因为 printRes() 是 Line 的友元，它可以直接访问该类的任何成员 */
-    cout << "res of line : " << line.res << endl;
+    cout << "res of line : " << line.res << "\n" << endl;
 }
 
 void ClassAndObject() {
@@ -144,6 +144,55 @@ Box::~Box() {
     delete ptr;
 }
 
+/**
+ *                              内联函数
+ * ---------------------------------------------------------------
+ * 降低程序的运行时间,通常与类一起使用。对内联函数进行任何修改，都需要重新编译函数的所有客户端，
+ * 因为编译器需要重新更换一次所有的代码，否则将会继续使用旧的函数。
+ * ---------------------------------------------------------------
+ */
+//方式一
+inline int Max(int x, int y) {
+    return x * y;
+}
+
+class InLineClass {
+public:
+    //方式二
+    inline void Complex() {
+        cout << "内联函数" << endl;
+    }
+
+    //方式三
+    int Compare2(int x, int y);
+};
+
+inline int InLineClass::Compare2(int x, int y) {
+    return (x > y) ? x : y;
+}
+
+/**
+ *                              类的静态成员
+ * ---------------------------------------------------------------
+ * 描述：
+ *  不能把静态成员的初始化放置在类的定义中，
+ *  但是可以在类的外部通过使用范围解析运算符 :: 来重新声明静态变量从而对它进行初始化
+ * ---------------------------------------------------------------
+ */
+
+class Runoob {
+public:
+    static int runoob_age; //静态成员变量
+    int run; //实例变量
+public:
+    void func() {
+        int runoob_local; //局部变量
+    }
+};
+
+//初始化类Runoob的静态成员变量
+int Runoob::runoob_age = 2020;
+
 
 /**
  * 主函数
@@ -163,6 +212,8 @@ void ClassAndObjectMainCpp() {
     line.setParams(10, 10, 10);
     //使用友元函数输出值
     printRes(line);
+
+    cout << "Max (5,5): " << Max(5, 5) << endl;
 }
 
 

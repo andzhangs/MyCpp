@@ -103,4 +103,9 @@ void CppMain() {
 
     extern void ClassAndObjectMainCpp();
     ClassAndObjectMainCpp();
+
+    printf("\n");
+
+    extern void ExtendMainCpp();
+    ExtendMainCpp();
 }

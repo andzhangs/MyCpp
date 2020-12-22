@@ -35,4 +35,4 @@ add_executable(MyCpp main.cpp
         cpp/StringMainCpp.cpp
         cpp/PointerMainCpp.cpp
         cpp/ReferenceMainCpp.cpp
-        cpp/DateAndTimeMainCpp.cpp cpp/IOMainCpp.cpp cpp/ClassAndObjectMainCpp.cpp cpp/ExtendMainCpp.cpp)
+        cpp/DateAndTimeMainCpp.cpp cpp/IOMainCpp.cpp cpp/ClassAndObjectMainCpp.cpp cpp/ExtendMainCpp.cpp cpp/MethodReloadMainCpp.cpp cpp/PolymorphicMainCpp.cpp cpp/FileAndStreamMainCpp.cpp)

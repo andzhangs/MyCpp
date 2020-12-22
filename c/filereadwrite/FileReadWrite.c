@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 //
 // Created by zhangshuai on 2020/12/8. 

@@ -6,6 +6,12 @@
 //
 
 using namespace std;
+namespace custom {
+    void funCustom() {
+        cout << "I am from namespace custom!" << endl;
+    }
+}
+using namespace custom;
 
 //typedef 为一个已有的类型取一个新的名字
 typedef int UserAge;
@@ -56,6 +62,8 @@ const int Heights = 5;
 
 void CppMain() {
     cout << "Hello, World!" << endl;
+
+    funCustom();
 
     UserAge userAge = 1;
     cout << userAge << endl;
@@ -108,4 +116,14 @@ void CppMain() {
 
     extern void ExtendMainCpp();
     ExtendMainCpp();
+
+    extern void MethodReloadMainCpp();
+    MethodReloadMainCpp();
+
+    extern void PolymorphicMainCpp();
+    PolymorphicMainCpp();
+
+    extern void FileAndStreamMainCpp();
+    FileAndStreamMainCpp();
+
 }

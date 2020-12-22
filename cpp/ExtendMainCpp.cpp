@@ -35,6 +35,7 @@ public:
     }
 };
 
+//多继承
 class Rectangle : public Shape, public PaintCost {
 public:
     int getArea() {
@@ -51,4 +52,5 @@ void ExtendMainCpp() {
     // 输出对象的面积
     cout << "Total area: " << area << endl;
     cout << "PointCost: " << rectangle.getCost(area) << endl;
+    printf("\n");
 }

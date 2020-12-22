@@ -18,9 +18,9 @@ void IOMainCpp() {
     char str[] = "Unable to read....";
 
     //非缓冲标准错误流
-    cerr << "Error message : " << str << endl;
+//    cerr << "Error message : " << str << endl;
     //非缓冲标准错误流
-    clog << "Error message : " << str << endl;
+//    clog << "Error message : " << str << endl;
 
     //其中 cout.setf 跟 setiosflags 一样，cout.precision 跟 setprecision 一样，cout.unsetf 跟 resetiosflags 一样。
     cout << setiosflags(ios::left | ios::showpoint);  // 设左对齐，以一般实数方式显示

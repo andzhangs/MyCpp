@@ -88,6 +88,6 @@ void demos() {
 
 //主函数
 void FileAndStreamMainCpp() {
-    demos();
+//    demos();
     printf("\n");
 }

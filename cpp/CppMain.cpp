@@ -5,6 +5,12 @@
 // Email：zhangshuai@dushu.io
 //
 
+/**
+ *                              命名空间
+ * ---------------------------------------------------------------
+ * 描述：自定义命名空间+嵌套命名空间
+ * ---------------------------------------------------------------
+ */
 using namespace std;
 namespace custom {
     void funCustom() {
@@ -12,6 +18,32 @@ namespace custom {
     }
 }
 using namespace custom;
+
+/**
+ * 嵌套命名空间
+ */
+namespace namespace_name1 {
+    void funcA() {
+        cout << "第一层命名空间" << endl;
+    }
+
+    namespace namespace_name2 {
+        void funcB() {
+            cout << "第二层命名空间" << endl;
+        }
+    }
+}
+// 访问 namespace_name2 中的成员
+using namespace namespace_name1::namespace_name2;
+// 访问 namespace_name1 中的成员
+using namespace namespace_name1;
+
+/**
+ *                              分割线
+ * ---------------------------------------------------------------
+ * 描述：
+ * ---------------------------------------------------------------
+ */
 
 //typedef 为一个已有的类型取一个新的名字
 typedef int UserAge;
@@ -64,6 +96,8 @@ void CppMain() {
     cout << "Hello, World!" << endl;
 
     funCustom();
+    funcA();
+    funcB();
 
     UserAge userAge = 1;
     cout << userAge << endl;
@@ -125,5 +159,8 @@ void CppMain() {
 
     extern void FileAndStreamMainCpp();
     FileAndStreamMainCpp();
+
+    extern void TemplateMainCpp();
+    TemplateMainCpp();
 
 }

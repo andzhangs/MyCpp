@@ -62,14 +62,6 @@ extern int a, b, c;
 //函数声明
 int func(int arg);
 
-/**
- * 定义常量方式：
- *  1、使用 #define 预处理器。
- *  2、使用 const 关键字。 const 类型的对象在程序执行期间不能被修改改变
- */
-#define Width 10;
-#define Height 5;
-const int Heights = 5;
 
 /**
  * 类型限定符
@@ -92,9 +84,66 @@ const int Heights = 5;
  * 例如：unsigned long int
  */
 
+/**
+ *                              C++预处理器
+ * ---------------------------------------------------------------
+ * 描述：
+ * ---------------------------------------------------------------
+ */
+/**
+* 定义常量方式：
+*  1、使用 #define 预处理器。
+*  2、使用 const 关键字。 const 类型的对象在程序执行期间不能被修改改变
+*/
+#define Width 10
+#define Height 5
+const int Heights = 5;
+
+//参数宏
+#define Min2Params(a, b) (a>b? a:b)
+#define DEBUG
+//条件编译
+//#ifdef NULL
+//#define NULL 0
+//#endif
+
+/**
+ * # 和 ## 运算符
+ * # 和 ## 预处理运算符在 C++ 和 ANSI/ISO C 中都是可用的。# 运算符会把 replacement-text 令牌转换为用引号引起来的字符串
+ */
+#define MKSTR(x) #x
+
+
+void PreprocessorVoid() {
+    printf("参数宏，输出：%d\n", Min2Params(1, 2));
+#ifdef DEBUG
+    cerr << "测试环境：Trace: Inside main function" << endl;
+#endif
+
+#if 0
+    /* 这是注释部分 */
+   cout << MKSTR(HELLO C++) << endl;
+#endif
+    printf("参数宏，输出：%d\n", Min2Params(3, 4));
+
+#ifdef DEBUG
+    cerr << "测试环境：Trace: Coming out of main function" << endl;
+#endif
+}
+
+
+/**
+ *                              主运行函数
+ * ---------------------------------------------------------------
+ * 描述：
+ * ---------------------------------------------------------------
+ */
 void CppMain() {
     cout << "Hello, World!" << endl;
 
+    PreprocessorVoid();
+
+    //命名空间
     funCustom();
     funcA();
     funcB();

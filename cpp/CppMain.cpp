@@ -108,13 +108,37 @@ const int Heights = 5;
 //#endif
 
 /**
- * # 和 ## 运算符
- * # 和 ## 预处理运算符在 C++ 和 ANSI/ISO C 中都是可用的。# 运算符会把 replacement-text 令牌转换为用引号引起来的字符串
+ * # 和 ## 预处理运算符在 C++ 和 ANSI/ISO C 中都是可用的。
+ *  1、# 运算符会把 replacement-text 令牌转换为用引号引起来的字符串
+ *  2、## 运算符用于连接两个令牌
  */
 #define MKSTR(x) #x
+#define CONCAT(X, Y) X ## Y
+
+/**
+ * C++ 中的预定义宏
+ *      宏	        描述
+ *   __LINE__	这会在程序编译时包含当前行号。
+ *   __FILE__	这会在程序编译时包含当前文件名。
+ *   __DATE__	这会包含一个形式为 month/day/year 的字符串，它表示把源文件转换为目标代码的日期。
+ *   __TIME__	这会包含一个形式为 hour:minute:second 的字符串，它表示程序被编译的时间。
+ */
 
 
+//预处理器
 void PreprocessorVoid() {
+    cout << "#运算符：" << MKSTR(HELLO C++) << endl;
+    int xy = 100;
+    cout << "##运算符：" << CONCAT(x, y) << endl;
+    printf("\n");
+
+    cout << "Value of __LINE__ : " << __LINE__ << endl;
+    cout << "Value of __FILE__ : " << __FILE__ << endl;
+    cout << "Value of __DATE__ : " << __DATE__ << endl;
+    cout << "Value of __TIME__ : " << __TIME__ << endl;
+    printf("\n");
+
+
     printf("参数宏，输出：%d\n", Min2Params(1, 2));
 #ifdef DEBUG
     cerr << "测试环境：Trace: Inside main function" << endl;
@@ -123,12 +147,14 @@ void PreprocessorVoid() {
 #if 0
     /* 这是注释部分 */
    cout << MKSTR(HELLO C++) << endl;
+#else
+    printf("参数宏，输出：%d\n", Min2Params(4, 3));
 #endif
-    printf("参数宏，输出：%d\n", Min2Params(3, 4));
 
 #ifdef DEBUG
     cerr << "测试环境：Trace: Coming out of main function" << endl;
 #endif
+    printf("\n");
 }
 
 
@@ -147,12 +173,17 @@ void CppMain() {
     funCustom();
     funcA();
     funcB();
+    printf("\n");
+
 
     UserAge userAge = 1;
     cout << userAge << endl;
+    printf("\n");
 
+    //枚举
     mColor = yellow;
     cout << mColor << endl;
+    printf("\n");
 
     int a, b, c;
     a = 10;
@@ -211,5 +242,14 @@ void CppMain() {
 
     extern void TemplateMainCpp();
     TemplateMainCpp();
+
+//    extern void SignalMainCpp();
+//    SignalMainCpp();
+
+//    extern void MultiThreadingMainCpp();
+//    MultiThreadingMainCpp();
+
+    extern void WebMainCpp();
+    WebMainCpp();
 
 }

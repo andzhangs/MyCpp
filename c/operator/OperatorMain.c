@@ -87,7 +87,6 @@ void RelationalOperators(void) {
     printf("关系运算符：\n");
     int a = 21;
     int b = 10;
-    int c;
 
     if (a == b) {
         printf("\t\tLine 1: a 等于 b\n");
@@ -122,7 +121,7 @@ void LogicalOperator(void) {
     printf("逻辑运算符：\n");
     int a = 5;
     int b = 20;
-    int c;
+    
     //两个操作数都非零，则条件为真
     if (a && b) {
         printf("\t\tLine 1 - 条件为真\n");

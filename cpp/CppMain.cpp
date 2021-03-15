@@ -97,7 +97,7 @@ int func(int arg);
 */
 #define Width 10
 #define Height 5
-const int Heights = 5;
+//const int Heights = 5;
 
 //参数宏
 #define Min2Params(a, b) (a>b? a:b)

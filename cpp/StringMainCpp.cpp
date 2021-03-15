@@ -11,7 +11,7 @@ int StringMainCpp() {
     string str1 = "Hello";
     string str2 = "World";
     string str3;
-    int len;
+    unsigned long len;
 
     // 复制 str1 到 str3
     str3 = str1;

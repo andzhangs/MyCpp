@@ -186,7 +186,7 @@ public:
     int run; //实例变量
 public:
     void func() {
-        int runoob_local; //局部变量
+//        int runoob_local; //局部变量
     }
 };
 

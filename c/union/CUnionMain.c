@@ -3,7 +3,7 @@
 //
 // Created by zhangshuai on 2020/12/8. 
 // Contact by zhangshuai@dushu.io
-// 公用体: 在相同的内存位置存储不同的数据类型
+// 共用体: 在相同的内存位置存储不同的数据类型
 //定义一个带有多成员的共用体，但是任何时候只能有一个成员带有值
 
 void CUnionMain(void) {

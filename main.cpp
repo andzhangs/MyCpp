@@ -28,7 +28,7 @@ using namespace std;
 extern void CppMain();
 
 int main(int argc, char *argv[]) {
-    CppMain();
+//    CppMain();
 
 //    //函数调用
 //    func(20);
@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
 //    CStructMain();
 
     //共用体
-//    CUnionMain();
+    CUnionMain();
 
     //typedef
 //    CTypeDefMain();

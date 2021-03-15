@@ -26,19 +26,19 @@ void MethodPointMain(void) {
 }
 
 //回调函数
-void populate_array(int *array, size_t arraySize, int (*methodName)(void)) {
+void populate_array(long *array, size_t arraySize, long (*methodName)(void)) {
     for (size_t i = 0; i < arraySize; ++i) {
         array[i] = methodName();
     }
 }
 
 //获取随机值
-int getNextRandomValue(void) {
+long getNextRandomValue(void) {
     return random();
 }
 
 void CallMethodMain() {
-    int myArray[10];
+    long myArray[10];
     int length = sizeof(myArray) / sizeof(myArray[0]);
 
     //getNextRandomValue 不能加括号，否则无法编译，
@@ -46,7 +46,7 @@ void CallMethodMain() {
     // 而不是函数指针
     populate_array(myArray, length, getNextRandomValue);
     for (int i = 1; i < length + 1; ++i) {
-        printf("第%d次打印值：%d\n", i, myArray[i]);
+        printf("第%d次打印值：%ld\n", i, myArray[i]);
     }
     printf("\n");
 }

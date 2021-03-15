@@ -10,7 +10,7 @@ void CStringMain(void) {
     char str1[12] = "hello";
     char str2[12] = " world";
     char str3[12];
-    int len;
+    long len;
 
     //复制str1到str3；
     strcpy(str3, str1);
@@ -22,7 +22,7 @@ void CStringMain(void) {
 
     //返回str1的长度
     len = strlen(str1);
-    printf("打印strlen：%d\n", len);
+    printf("打印strlen：%ld\n", len);
 
     //返回一个指针，指向字符串 str1 中字符 he 的第一次出现的位置。
     char *p = strchr(str1, 0);

@@ -129,7 +129,6 @@ void createThread3() {
  * 如果线程创建时被定义为可分离的，则它永远也不能被连接。
  */
 void *wait(void *t) {
-    int i;
     long tid;
     tid = (long) t;
     sleep(1);
